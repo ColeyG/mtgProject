@@ -4,7 +4,8 @@ var myApp = {
         data : {
             name : "Hello World!",
             results : [],
-            imageLink : ''
+            imageLink : '',
+            pool : []
         },
         methods : {
             getCard: function (event) {
@@ -12,6 +13,7 @@ var myApp = {
                 this.results.push(response.data)
                 this.name = response.data.name
                 this.imageLink = response.data.image_uris.small
+                this.pool.push(response.data.name)
               })
             },
             getSpecCard : function (event) {
@@ -22,13 +24,14 @@ var myApp = {
                 this.results = response.data
                 this.name = response.data.name
                 this.imageLink = response.data.image_uris.small
+                this.pool.push(response.data.name)
               })
             }
         }
     })
 }
 
-// for(i=0;i<90;i++){
-//     myApp.vm.getCard();
-// }
-myApp.vm.getCard();
+for(i=0;i<90;i++){
+    myApp.vm.getCard();
+}
+// myApp.vm.getCard();
