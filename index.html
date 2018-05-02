@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vague but still Cool MTG Project</title>
+    <title>MTG Theme Sealed</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/ColeyG/cole.css/52c814ea/css/cole.css">
+    <link rel="stylesheet" href="css/main.css">
+    
 </head>
-<body>
-   <a href="#" class="getRandomCard">Get a RANDOM card</a>
-   <input id="input" type="text">
-   <a href="#" id="getNamedCard">Get a NAMED card</a>
-   <h2 id="cardName"></h2>
-   <p id="oracleText"></p>
-    <img id="cardImage" src="" alt="cardImage" hidden>
-   <script src="request.js"></script>
+<body class='cFlexInRow'>
+    <div id="app" class='cFlexInCol'>
+        <img v-bind:src='imageLink' alt="">
+        <p>{{name}}</p>
+        <input type="text" id='nameIn'>
+        <button v-on:click='getSpecCard' >Get Named Card</button>
+        <button v-on:click='getCard' >Get Any Card</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='js/main.js'></script>
 </body>
 </html>
