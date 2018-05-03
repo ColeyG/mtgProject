@@ -65,11 +65,23 @@ table {
     align-items: center;
     flex-direction: row;
 }
+.cFlexInRowRev{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+}
 .cFlexInCol{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+}
+.cFlexInColRev{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column-reverse;
 }
 .cFullWidth{
     width:100%;
