@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MTG Theme Sealed</title>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/ColeyG/cole.css/52c814ea/css/cole.css">
+    <link rel="stylesheet" href="css/cole.css">
     <link rel="stylesheet" href="css/main.css">
     
 </head>
-<body class='cFlexInRow'>
+<body class='cFlexInCol'>
     <div id="app" class='cFlexInCol'>
         <img v-bind:src='imageLink' alt="">
         <p>{{name}}</p>
